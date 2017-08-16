@@ -1,0 +1,4 @@
+#!/bin/bash
+chown $UID.$GID /home
+export HOME=/home
+/bin/bash
