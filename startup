@@ -1,4 +1,7 @@
 #!/bin/bash
-chown $UID.$GID /home
-export HOME=/home
+#chown $UID.$GID /home
+#export HOME=/home
+export PATH=$PATH:/root/.chefdk/gem/ruby/2.4.0/bin:/home/.gem/ruby/2.4.0/bin
+cp -r /src /home/
+cd /home/src
 /bin/bash

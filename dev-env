@@ -2,4 +2,5 @@ if [ ! -d "$1" ]; then
 	echo $1 is not a directory
 	exit 1
 fi
-docker run -u $UID:`id -g` --tmpfs /src -v `realpath $1`:/src -v /var/run/docker.sock:/var/run/docker.sock -it --rm dev-env
+#docker run -u $UID:`id -g` --tmpfs /home -v `realpath $1`:/src -v /var/run/docker.sock:/var/run/docker.sock -it --rm dev-env
+docker run --tmpfs /home/src -v `realpath $1`:/src -v /var/run/docker.sock:/var/run/docker.sock -it --rm dev-env
