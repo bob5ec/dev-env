@@ -3,4 +3,4 @@ if [ ! -d "$1" ]; then
 	exit 1
 fi
 #docker run -u $UID:`id -g` --tmpfs /home -v `realpath $1`:/src -v /var/run/docker.sock:/var/run/docker.sock -it --rm dev-env
-docker run --tmpfs /home/src -v `realpath $1`:/src -v /var/run/docker.sock:/var/run/docker.sock -it --rm dev-env
+docker run --tmpfs /home/src --name kitchen -v `realpath $1`:/src -v /var/run/docker.sock:/var/run/docker.sock -it --rm dev-env
